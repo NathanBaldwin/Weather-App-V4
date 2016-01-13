@@ -1,8 +1,18 @@
-<ion-view view-title="Blank Template">
+<ion-view view-title="test template">
   <ion-content class="padding">
+  <div class="bar bar-header item-input-inset">
+    <label class="item-input-wrapper">
+      <i class="icon ion-ios-search placeholder-icon"></i>
+      <input type="search" placeholder="Search" ng-model="weather.searchQuery">
+    </label>
+    <button class="button button-clear" ng-click="weather.search()">
+      Search
+    </button>
+  </div>
     <h1 class="centered">{{weather.temp}}°</h1>
       <div class="row">  
-          <skycon class="center-me" icon="weather.iconName" color="weather.color" ></skycon>
+          <!-- <skycon class="center-me" icon="weather.iconName" color="weather.color" ></skycon> -->
+          <img src="{{weather.icon}}" class="center-me">
       </div>
   </ion-content>
 </ion-view>
